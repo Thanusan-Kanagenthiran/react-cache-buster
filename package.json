@@ -1,6 +1,6 @@
 {
   "name": "react-cache-buster",
-  "version": "0.3.2",
+  "version": "0.3.5",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
