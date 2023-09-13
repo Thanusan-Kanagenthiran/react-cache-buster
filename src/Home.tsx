@@ -6,7 +6,8 @@ const Home = (version : any) => {
     <div>Home
         <br />
          <button onClick={checkCacheStatus}>Check for new version</button>
-         <p>{version}</p>
+         <p>{version} test</p>
+
     </div>
   )
 }
