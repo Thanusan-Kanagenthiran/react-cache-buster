@@ -1,24 +1,28 @@
+
 import React from 'react';
 import CacheBuster from 'react-cache-buster';
 import Home from './Home';
 import Loading from './Loading';
+import packageJson from '../package.json';
+declare global {
+  var appVersion: string;
+}
 
-const appVersion = require('../package.json').version;
+global.appVersion = packageJson.version;
 
 const App = () => {
-  // const isProduction = process.env.NODE_ENV === 'production';
+  const appVersion = global.appVersion;
+
   return (
     <CacheBuster
       currentVersion={appVersion}
-      isEnabled={true} //If false, the library is disabled.
-      isVerboseMode={true} //If true, the library writes verbose logs to console.
-      loadingComponent={<Loading />} //If not pass, nothing appears at the time of new version check.
-      metaFileDirectory={'.'} //If public assets are hosted somewhere other than root on your server.
+      isEnabled={true}
+      isVerboseMode={true}
+      loadingComponent={<Loading />}
+      metaFileDirectory={'.'}
       reloadOnDowngrade={true}
     >
-
-      <Home  />
-
+      <Home />
     </CacheBuster>
   );
 };
