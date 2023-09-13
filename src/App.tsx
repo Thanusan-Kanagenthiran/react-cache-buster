@@ -9,6 +9,7 @@ declare global {
 }
 
 global.appVersion = packageJson.version;
+console.log(appVersion);
 
 const App = () => {
   const appVersion = global.appVersion;
