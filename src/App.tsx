@@ -17,7 +17,7 @@ const App = () => {
       reloadOnDowngrade={true}
     >
 
-      <Home />
+      <Home version={appVersion} />
 
     </CacheBuster>
   );
