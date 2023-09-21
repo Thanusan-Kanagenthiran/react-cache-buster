@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <div>Home
         <br />
-         <button onClick={checkCacheStatus}>Check for new version</button>
+         <button onClick={checkCacheStatus}>
+          check version
+         </button>
 
     </div>
   )
